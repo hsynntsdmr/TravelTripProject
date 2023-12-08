@@ -15,7 +15,7 @@ namespace TravelTripProject.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+           
 
             return View();
         }
@@ -26,5 +26,7 @@ namespace TravelTripProject.Controllers
 
             return View();
         }
+
+     
     }
 }
