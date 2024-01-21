@@ -1,0 +1,28 @@
+﻿@model TravelTripProject.Models.Yorum
+@{
+    ViewBag.Title = "Yorum Guncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>BLOG GÜNCELLE</h2>
+<br />
+
+@using (Html.BeginForm("YorumGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(i => i.Id)
+    @Html.TextBoxFor(i => i.Id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(i => i.KullaniciAdi)
+    @Html.TextBoxFor(i => i.KullaniciAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(i => i.Mail)
+    @Html.TextBoxFor(i => i.Mail, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(i => i.BlogYorum)
+    @Html.TextAreaFor(i => i.BlogYorum,15,1, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">Güncelle</button>
+
+
+}

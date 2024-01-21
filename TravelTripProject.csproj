@@ -128,8 +128,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -138,6 +140,7 @@
     <Compile Include="Models\AdresBlog.cs" />
     <Compile Include="Models\Anasayfa.cs" />
     <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\BlogYorum.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Hakkimizda.cs" />
     <Compile Include="Models\Iletisim.cs" />
@@ -161,6 +164,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\images\logo1.jfif" />
+    <Content Include="Content\images\logo2.jfif" />
+    <Content Include="Content\images\logo3.jfif" />
+    <Content Include="Content\images\logo4.jfif" />
+    <Content Include="Content\images\logo5.jfif" />
+    <Content Include="Content\images\logo6.jfif" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -189,6 +198,9 @@
     <Content Include="web2\js\move-top.js" />
     <Content Include="web2\single.html" />
     <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="weblogin Tema\weblogin Tema\css\style.css" />
+    <Content Include="weblogin Tema\weblogin Tema\images\b4.jpg" />
+    <Content Include="weblogin Tema\weblogin Tema\index.html" />
     <Content Include="web\about.html" />
     <Content Include="web\contact.html" />
     <Content Include="Content\css\slider.css" />
@@ -255,6 +267,22 @@
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\BlogDetay.cshtml" />
+    <Content Include="Views\Home\Partial1.cshtml" />
+    <Content Include="Views\Home\Partial2.cshtml" />
+    <Content Include="Views\Home\Partial3.cshtml" />
+    <Content Include="Views\Home\Partial4.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\YeniBlog.cshtml" />
+    <Content Include="Views\Admin\BlogGuncelle.cshtml" />
+    <Content Include="Views\Admin\BlogGetir.cshtml" />
+    <Content Include="Views\Blog\YorumYap.cshtml" />
+    <Content Include="Views\Admin\YorumListesi.cshtml" />
+    <Content Include="Views\Admin\YorumGetir.cshtml" />
+    <Content Include="weblogin Tema\weblogin Tema\fonts\Asap-Regular.ttf" />
+    <Content Include="weblogin Tema\weblogin Tema\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

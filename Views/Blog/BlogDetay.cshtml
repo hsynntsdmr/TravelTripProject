@@ -1,6 +1,6 @@
 ﻿@model TravelTripProject.Models.BlogYorum
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "BlogDetay";
 }
 <!DOCTYPE HTML>
 <html>
@@ -19,52 +19,63 @@
     <!----//webfonts---->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!--end slider -->
-    <!--script-->
-    <script type="~/web2/text/javascript" src="js/move-top.js"></script>
-    <script type="~/web2/text/javascript" src="js/easing.js"></script>
-
 
 </head>
 <body>
 
+    <!--/header-->
     <div class="single">
         <div class="container">
             <div class="col-md-8 single-main">
-                @foreach (var x in Model.blogList)
-                {
-                    <div class="single-grid">
-                        <img style="margin-bottom:30px" src="@x.BlogImage" alt="Blog Resimleri" />
-                        <a href="/Blog/BlogDetay/@x.ID">@x.Baslik</a>
-                        <p>
-                            @x.Aciklama
-                        </p>
-                    </div>
-                }
+                <div class="single-grid">
+                    @foreach (var x in Model.blogList)
+                    {
+                        <img src="@x.BlogImage" alt="Blog Fotografları" style="margin-bottom:30px;" />
+                        <h2>@x.Baslik</h2>
+                        <p>@x.Aciklama</p>
+                    }
+                </div>
+                @foreach(var item in Model.yorumList) {
+                <ul class="comment-list">
 
+                    <li>
+                        <img src="~/web2/images/avatar.png" class="img-responsive" alt="">
+                        <div class="desc">
+                            <p>@item.KullaniciAdi: @item.BlogYorum</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                </ul>
+                }
+            @Html.Action("YorumYap","Blog")
             </div>
 
             <div class="col-md-4 side-content">
                 <div class="recent">
-                    <h3>SON BLOGLAR</h3>
-                    @foreach(var x in Model.sonBlogList) {
+                    <h3>Son Bloglar</h3>
                     <ul>
-                        <li><a href="/Blog/BlogDetay/@x.ID">@x.Baslik</a></li>
-                    
+                        <li><a href="#">Aliquam tincidunt mauris</a></li>
+                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
+                        <li><a href="#">Nunc dignissim risus consecu</a></li>
+                        <li><a href="#">Cras ornare tristiqu</a></li>
                     </ul>
-                    }
                 </div>
                 <div class="comments">
-                    <h3>SON YORUMLAR</h3>
+                    <h3>Son Yorumlar</h3>
                     <ul>
                         <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
                         <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
                         <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
                     </ul>
-
-
                 </div>
+
             </div>
+            <div class="clearfix"></div>
         </div>
     </div>
+
 </body>
 </html>
+
+
+

@@ -1,0 +1,30 @@
+﻿@model TravelTripProject.Models.Blog
+@{
+    ViewBag.Title = "Blog Guncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>BLOG GÜNCELLE</h2>
+<br />
+
+@using (Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(i => i.ID)
+    @Html.TextBoxFor(i => i.ID, new { @class = "form-control", @readonly="readonly" })
+    <br />
+    @Html.LabelFor(i => i.Baslik)
+    @Html.TextBoxFor(i => i.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(i => i.Tarih)
+    @Html.TextBoxFor(i => i.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(i => i.BlogImage)
+    @Html.TextBoxFor(i => i.BlogImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(i => i.Aciklama)
+    @Html.TextAreaFor(i => i.Aciklama,15,1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+
+
+}

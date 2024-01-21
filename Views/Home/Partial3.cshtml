@@ -1,0 +1,21 @@
+﻿@using TravelTripProject.Models
+@model List<Blog>
+
+<div class="padding1">
+
+    <h4>En Beğendiğim Yerler</h4>
+    <div class="box-left">
+        @foreach (var item in Model)
+        {
+            <div class="bot-img">
+                <img src="@item.BlogImage" alt="Blog Resimleri" />
+            </div>
+            <div class="bot-desc">
+                <p>@(item.Aciklama.Length >= 51 ? item.Aciklama.Substring(0, 80) : item.Aciklama)... <a href="/Blog/BlogDetay/@item.ID" style="font-weight:700;">Devamını Oku</a> </p>
+            </div>
+            <div class="clear"></div>
+        }
+    </div>
+    @Html.Action("Partial4", "Home")
+ 
+</div>
